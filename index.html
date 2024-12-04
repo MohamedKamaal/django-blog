@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <title>Home</title>
+    <style type="text/tailwindcss">
+        .navitems>li>a {
+            @apply hover:bg-gray-800 hover:rounded-lg p-4
+        }
+
+    </style>
+</head>
+<body>
+    <header class="bg-gray-900 text-white flex items-center justify-between p-4 h-20">
+        <a href="" class="flex gap-1 items-center ">
+            <img class="h-8 -mt-1" src="https://img.icons8.com/small/64/ffffff/fire-heart.png" alt="fire-heart"/>
+            <p>Awesome</p>
+        </a>
+
+        <nav>
+            <ul class="flex gap-5 items-center navitems">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Create Post</a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center gap-1">
+                        <img class="h-8 rounded-full bg-teal-200" src="https://img.icons8.com/doodle/48/bart-simpson.png" alt="bart-simpson"/>
+                        <span>Bart</span>
+                        <img class="w-4" src="https://img.icons8.com/windows/32/777777/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+</body>
+</html>
