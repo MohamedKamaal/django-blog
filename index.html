@@ -26,6 +26,13 @@
             margin-bottom:1rem;
             font-family:var(--font1);
         }
+        h2 {
+            font-size:1.5rem;
+            font-weight:bold;
+            line-height:2;
+            margin-bottom:.75rem;
+
+        }
         .font1{
             font-family:var(--font1);
         }
@@ -62,6 +69,14 @@
             background-color:white;
             padding-bottom:rem;
         }
+        .hover-list>li{
+            @apply hover:bg-gray-100 rounded-lg transition duration-150 p-2
+        }
+        
+        .highlight{
+            @apply !bg-indigo-200
+        }
+        
     </style>
 </head>
 <body class="bg-gray-100">
@@ -121,10 +136,10 @@
                 <div class="p-4 pb-2">
                 <div class="flex items-center gap-1 mt-2 p-4">
                     <img class="w-8 h-8" src="https://img.icons8.com/small/64/happy.png" alt="happy"/>
-                    <a href="" class="hover:underline font-bold">Nody Emad</a>
+                    <a href="" class="hover:underline font-bold">Mohamed Kamal</a>
                 </div>
                 <p class="text-5xl mb-10 px-4 font1">
-                    nody is the best woman
+                    I love Rome
                 </p>
                 <div class="flex items-center gap-2 text-sm mb-10 p-4 ">
                     <a href="" class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-900 hover:text-white">Animals</a>
@@ -149,10 +164,88 @@
                
             </article>
         </main>
-        <aside class="col-span-1 bg-blue-200 mr-[20%]">aside</aside>
-     </section>
+      
      
-    <!---->
+        <!-- aside section -->
+        <aside class="col-span-1 mr-[20%]">
+            <!-- categories-->
+          <section class="card p-4">
+            <h2>Categories</h2>
+            <ul class="hover-list">
+                <li class="highlight">
+                    <a href="">
+                        <img class="inline w-8 object-cover mr-2" src="https://img.icons8.com/small/64/guest-male.png" alt="guest-male"/>
+                        <span class="font-bold text-sm ">people</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <img class="inline w-8 object-cover mr-2" src="https://img.icons8.com/small/64/guest-male.png" alt="guest-male"/>
+                        <span class="font-bold text-sm ">people</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img class="inline w-8 object-cover mr-2" src="https://img.icons8.com/small/64/guest-male.png" alt="guest-male"/>
+                        <span class="font-bold text-sm ">people</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img class="inline w-8 object-cover mr-2" src="https://img.icons8.com/small/64/guest-male.png" alt="guest-male"/>
+                        <span class="font-bold text-sm ">people</span>
+                    </a>
+                </li>
+            </ul>
+          </section>
+          <!-- photos-->
+           <section class="card p-4">
+            <h2>Top Photos</h2>
+        <ul class="hover-list" >
+            <li >
+                <a href="" >
+                    <img class="inline w-6 object-cover" src="https://img.icons8.com/small/64/guest-male.png" alt="guest-male"/>                  
+                    <img class="inline  w-6 h-6" src="https://img.icons8.com/small/64/happy.png" alt="happy"/>
+                    <a href="" class="text-sm font-bold">Mohamed Kamal <span class="font-light text-gray-500">(5 likes)</span></a>
+                
+                
+                </a>
+            </li>
+            <li >
+                <a href="" >
+                    <img class="inline w-6 object-cover" src="https://img.icons8.com/small/64/guest-male.png" alt="guest-male"/>                  
+                    <img class="inline  w-6 h-6" src="https://img.icons8.com/small/64/happy.png" alt="happy"/>
+                    <a href="" class="text-sm font-bold">Mohamed Kamal <span class="font-light text-gray-500">(5 likes)</span></a>
+                
+                
+                </a>
+            </li>
+                
+        </ul>
+           </section>
+           <!-- top captions-->
+            <section class="card p-4">
+                <h2>Top Caption</h2>
+                <ul class="hover-list">
+                    <li>
+                        <a href="">
+                            <img class="inline  w-6 h-6" src="https://img.icons8.com/small/64/happy.png" alt="happy"/>
+                            <a href="" class="text-sm font-bold">Mohamed Kamal <span class="font-light text-gray-500">(5 likes)</span></a>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="inline  w-6 h-6" src="https://img.icons8.com/small/64/happy.png" alt="happy"/>
+                            <a href="" class="text-sm font-bold">Mohamed Kamal <span class="font-light text-gray-500">(5 likes)</span></a>
+
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </section>
     <!---->
    
         
