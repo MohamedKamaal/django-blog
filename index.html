@@ -33,6 +33,13 @@
             margin-bottom:.75rem;
 
         }
+        h2 {
+            font-size:1.5rem;
+            font-weight:bold;
+            line-height:2;
+            margin-bottom:.75rem;
+
+        }
         .font1{
             font-family:var(--font1);
         }
@@ -69,6 +76,14 @@
             background-color:white;
             padding-bottom:rem;
         }
+        .hover-list>li{
+            @apply hover:bg-gray-100 rounded-lg transition duration-150 p-2
+        }
+        
+        .highlight{
+            @apply !bg-indigo-200
+        }
+        
         .hover-list>li{
             @apply hover:bg-gray-100 rounded-lg transition duration-150 p-2
         }
