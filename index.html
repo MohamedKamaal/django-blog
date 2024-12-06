@@ -167,10 +167,20 @@
     </article>
 
     <!-- content section -->
-     <section class="grid grid-cols-3 max-w-6xl mx-auto mt-6">
+     <section x-data="{categoriesOpen:false}"
+     class="grid grid-cols-3 max-w-6xl mx-auto mt-6">
+
+        <!-- categories button-->
+        <a class="block md:hidden flex items-center gap-2 mx-auto p-4 hover:bg-gray-200 rounded-lg col-span-full mb-2 cursor-pointer p-3" @click="categoriesOpen=!categoriesOpen"
+            
+        >
+        <span class="font-bold">Categories</span>    
+        <img x-bind:class="categoriesOpen ? 'rotate-180 duration-300':'' " 
+                        class="w-4" src="https://img.icons8.com/windows/32/777777/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+        </a>
 
     <!-- post container -->
-        <main class="col-span-2 mx-[10%] ">
+        <main class="col-span-full md:col-span-2 mx-[5%] md:mx-[10%] order-2 md:order-1 ">
 
             <!--posts-->
             <article class="post card">
@@ -215,10 +225,13 @@
                
             </article>
         </main>
-      
-     
+        
         <!-- aside section -->
-        <aside class="col-span-1 mr-[20%]">
+        <aside x-show="categoriesOpen" x-cloak
+        x-transition:enter="duration-300 ease-out"
+        x-transition:enter-start="opacity-0 -transalte-y-5 scale-90"
+        x-transition:enter-end="opacity-100 -transalte-y-5 scale-100"  
+        class="col-span-full md:col-span-1 mx-[5%] md:mr-[20%] order-1 md:order-2 md:!block">
             <!-- categories-->
           <section class="card p-4">
             <h2>Categories</h2>
