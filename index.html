@@ -100,14 +100,26 @@
     </style>
 </head>
 <body class="bg-gray-100">
-    <header class="bg-gray-900 text-white flex items-center justify-between p-4 h-20 sticky top-0">
-        <a href="" class="flex gap-1 items-center ">
+    <header x-data="{navOpen:false}" class="bg-gray-900 text-white md:flex items-center justify-between p-4 h-20 sticky top-0 z-50">
+        <div class="flex items-center justify-between">
+        <logo>
+        <a href="" class="flex gap-1 items-center h-20 ">
             <img class="h-8 -mt-1" src="https://img.icons8.com/small/64/ffffff/fire-heart.png" alt="fire-heart"/>
-            <p>Awesome</p>
+            <span class="text-lg font-bold">Awesome</span >
         </a>
-
-        <nav>
-            <ul class="flex gap-5 items-center navitems">
+    </logo>
+    <!-- menu-->
+     <menu class="md:hidden">
+        <a @click="navOpen=!navOpen"
+        class="cursor-pointer h-12 w-12 hover:bg-gray-800 hover:rounded-lg block flex justify-center items-center">
+        <img x-show = "!navOpen" x-cloak class="h-6 w-6" src="https://img.icons8.com/small/64/ffffff/menu.png" alt="menu"/>
+        <img x-show = "navOpen" x-cloak class="h-6 w-6" src="https://img.icons8.com/small/64/ffffff/delete-sign.png" alt="delete-sign"/>
+    </a>
+     </menu>
+    </div>
+     <!-- nav-->
+        <nav x-show="navOpen" x-cloak class="md:!block max-md:bg-gray-500">
+            <ul class="flex max-md:justify-between md:gap-5 items-center navitems ">
                 <li>
                     <a href="">Home</a>
                 </li>
